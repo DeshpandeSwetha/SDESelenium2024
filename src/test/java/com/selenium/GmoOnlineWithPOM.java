@@ -44,6 +44,6 @@ public class GmoOnlineWithPOM extends Library
 		System.out.println("floatTotalPrice:"+floatTotalPrice);
 		
 		Assert.assertEquals(calculateValueOfUnitPrice, floatTotalPrice);
-		//driver.close();
+		driver.close();
 	}
 }
