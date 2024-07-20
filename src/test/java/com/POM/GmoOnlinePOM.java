@@ -11,23 +11,34 @@ public class GmoOnlinePOM
 	
 	public GmoOnlinePOM(WebDriver driver)
 	{
-		this.driver = driver;
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(name = "bSubmit")
+	@FindBy(name="bSubmit")
 	public WebElement EnterGmoOnline;
 	
-	@FindBy(name = "QTY_GLASSES")
+	@FindBy(name="QTY_GLASSES")
 	public WebElement Glacier_Sun_Glasses;
 	
-	@FindBy(name = "bSubmit")
+	@FindBy(name="bSubmit")
 	public WebElement PlaceAnOrder;
 	
-	
-	@FindBy(xpath = "//table[@cellpadding='4' and @border='1']/tbody/tr[2]/td[4]")
+	@FindBy(xpath="//table[@cellpadding='4' and @border='1']/tbody/tr[2]/td[4]")
 	public WebElement unitPriceFromApp;
 	
-	@FindBy(xpath = "//table[@cellpadding='4' and @border='1']/tbody/tr[2]/td[5]")
+	@FindBy(xpath="//table[@cellpadding='4' and @border='1']/tbody/tr[2]/td[5]")
 	public WebElement totalPriceFromApp;
+	
+	@FindBy(xpath="//table[@cellpadding='4' and @border='1']/tbody/tr[4]/td[2]")
+	public WebElement slaesTaxFromApp;
+	
+	@FindBy(xpath="//table[@cellpadding='4' and @border='1']/tbody/tr[5]/td[2]")
+	public WebElement shippingAndHandlingFromApp;
+	
+	@FindBy(xpath="//table[@cellpadding='4' and @border='1']/tbody/tr[6]/td[2]")
+	public WebElement grandTotalFromApp;
+	
+	@FindBy(xpath="//table[@cellpadding='4' and @border='1']/tbody/tr[3]/td[3]")
+	public WebElement productTotalFromApp;
 }
